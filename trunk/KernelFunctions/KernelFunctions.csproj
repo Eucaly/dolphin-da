@@ -7,8 +7,8 @@
     <ProjectGuid>{A5833B0A-2544-401F-BBA6-32C344237171}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>KernelFunctions</RootNamespace>
-    <AssemblyName>KernelFunctions</AssemblyName>
+    <RootNamespace>Dolphin.KernelFunctions</RootNamespace>
+    <AssemblyName>Dolphin</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

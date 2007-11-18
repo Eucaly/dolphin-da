@@ -7,8 +7,8 @@
     <ProjectGuid>{13CE977F-1BB8-4A7F-8CF5-8A781228B2B6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GUI</RootNamespace>
-    <AssemblyName>GUI</AssemblyName>
+    <RootNamespace>Dolphin.GUI</RootNamespace>
+    <AssemblyName>Dolphin</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
