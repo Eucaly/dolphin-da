@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{13CE977F-1BB8-4A7F-8CF5-8A781228B2B6}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dolphin", "Dolphin\Dolphin.csproj", "{A6EECBFF-5DCC-4165-B17B-E2DF5E1B2376}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KernelFunctions", "KernelFunctions\KernelFunctions.csproj", "{A5833B0A-2544-401F-BBA6-32C344237171}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs05.codeplex.com/
+		SccProjectUniqueName0 = GUI\\GUI.csproj
+		SccProjectName0 = GUI
+		SccAuxPath0 = https://tfs05.codeplex.com
+		SccLocalPath0 = GUI
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = Dolphin\\Dolphin.csproj
+		SccProjectName1 = Dolphin
+		SccAuxPath1 = https://tfs05.codeplex.com
+		SccLocalPath1 = Dolphin
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName2 = KernelFunctions\\KernelFunctions.csproj
+		SccProjectName2 = KernelFunctions
+		SccAuxPath2 = https://tfs05.codeplex.com
+		SccLocalPath2 = KernelFunctions
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13CE977F-1BB8-4A7F-8CF5-8A781228B2B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13CE977F-1BB8-4A7F-8CF5-8A781228B2B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13CE977F-1BB8-4A7F-8CF5-8A781228B2B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13CE977F-1BB8-4A7F-8CF5-8A781228B2B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6EECBFF-5DCC-4165-B17B-E2DF5E1B2376}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6EECBFF-5DCC-4165-B17B-E2DF5E1B2376}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6EECBFF-5DCC-4165-B17B-E2DF5E1B2376}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6EECBFF-5DCC-4165-B17B-E2DF5E1B2376}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5833B0A-2544-401F-BBA6-32C344237171}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5833B0A-2544-401F-BBA6-32C344237171}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5833B0A-2544-401F-BBA6-32C344237171}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5833B0A-2544-401F-BBA6-32C344237171}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = 
+	EndGlobalSection
+EndGlobal
