@@ -1,0 +1,128 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A6EECBFF-5DCC-4165-B17B-E2DF5E1B2376}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dolphin</RootNamespace>
+    <AssemblyName>DolphinGui</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="dnAnalytics, Version=0.2.0.0, Culture=neutral, PublicKeyToken=b92cbae8a6178fa6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\dnAnalytics.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FunctionLoader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Global.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GUI\FunctionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\FunctionControl.Designer.cs">
+      <DependentUpon>FunctionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KernelFunctionEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GUI\PatternSetConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NN\ActivationFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NN\FeedForward\Level.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NN\FeedForward\Network.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NN\FeedForward\Neuron.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NN\Neuron.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NN\Teacher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Pattern.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PatternSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PluginFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Regression\KAAR.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Regression\KAARCh.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Regression\KernelFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Regression\Regression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Regression\RR.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Validatable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ValidatableParameter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GUI\FunctionControl.resx">
+      <DependentUpon>FunctionControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
