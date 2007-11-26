@@ -4,7 +4,6 @@ using System.ComponentModel;
 using dnAnalytics;
 using dnAnalytics.LinearAlgebra;
 using Dolphin.GUI;
-using System.Collections;
 
 namespace Dolphin.Regression
 {
@@ -24,20 +23,12 @@ namespace Dolphin.Regression
         private int trainingSize = 0;
         private int testingSize = 0;
         private int validationSize = 0;
-        private int windowSize = 0;
         private PatternSet dataSet;
         private int permutations = 10;
         private TestingMode mode;
 
         private KernelFunction kernelFunction;
         private Matrix gramMatrix;
-
-        [Category("Online testing")]
-        public int WindowSize
-        {
-            get { return windowSize; }
-            set { windowSize = value; }
-        }
 
         [Category("General")]
         public TestingMode Mode
@@ -189,23 +180,21 @@ namespace Dolphin.Regression
         public abstract double GetPrediction(List<double> signal);
 
         private double OnlineTest(UpdateCallBack callback)
-        {
-            Queue<Pattern> window = new Queue<Pattern>(DataSet.GetRange(0, WindowSize));
-            
-            int position = windowSize;
+        {            
+            int position = 0;
             double mse = 0;
-            while (position < TestingSize+WindowSize)
+            while (position < TestingSize+TrainingSize)
             {
-                Pattern[] tmp = window.ToArray();
-                Array.Reverse(tmp);
-                TrainingSet = new PatternSet(tmp);
+                TrainingSet = new PatternSet(DataSet.GetRange(position, TrainingSize));
 
-                mse += Math.Pow(GetPrediction(DataSet[position].Input) - DataSet[position].Output[0], 2);
+                mse +=
+                    Math.Pow(
+                        GetPrediction(DataSet[position + TrainingSize].Input) -
+                        DataSet[position + TrainingSize].Output[0], 2);
                 EndCache();
                 
-                window.Dequeue();
-                window.Enqueue(DataSet[position]);
                 callback.Invoke();
+                position++;
             }
             return mse/TestingSize;
         }
@@ -255,7 +244,7 @@ namespace Dolphin.Regression
             else throw new Exception("Unsupported testing mode " + mode);
         }
 
-        private double CalculateMse(PatternSet patternSet)
+        private double CalculateMse(ICollection<Pattern> patternSet)
         {
             double mse = 0;
             StartCache();
@@ -285,7 +274,7 @@ namespace Dolphin.Regression
 
         public override string ToString()
         {
-            return "Kernel Function = " + KernelFunction.ToString();
+            return "Kernel Function = " + KernelFunction;
         }
 
         #region Validation Interface

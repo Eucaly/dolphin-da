@@ -8,7 +8,7 @@ namespace Dolphin.Regression
 {
     public class RR : Regression
     {
-        private ValidatableParameter a = new ValidatableParameter(3, 3, 1, 0);
+        private ValidatableDouble a = new ValidatableDouble(3, 3, 1, 0);
         private bool useTraceRatio;
         private Matrix cache = null;
         private Matrix kAI;
@@ -29,7 +29,7 @@ namespace Dolphin.Regression
         [Category("Ridge Regression")]
         //[Editor(typeof(ValidatableParameterEditor), typeof(System.Drawing.Design.UITypeEditor))]
         [TypeConverter(typeof(ExpandableObjectConverter))]
-        public virtual ValidatableParameter A
+        public virtual ValidatableDouble A
         {
             get { return a; }
             set { a = value; }
