@@ -2,7 +2,7 @@ using System.ComponentModel;
 
 namespace Dolphin
 {
-    public class ValidatableParameter : Validatable
+    public class ValidatableDouble : Validatable
     {
         private double high, low, step, value, best;
 
@@ -50,7 +50,7 @@ namespace Dolphin
         }
 
 
-        public ValidatableParameter(double low, double high, double step, double value)
+        public ValidatableDouble(double low, double high, double step, double value)
         {
             this.high = high;
             this.low = low;
@@ -58,11 +58,11 @@ namespace Dolphin
             this.value = value;
         }
 
-        public ValidatableParameter(double low, double high, double step) : this(low, high, step, 0)
+        public ValidatableDouble(double low, double high, double step) : this(low, high, step, 0)
         {
         }
 
-        public static implicit operator double(ValidatableParameter m)
+        public static implicit operator double(ValidatableDouble m)
         {
             return m.Value;
         }
